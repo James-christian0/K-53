@@ -1,6 +1,5 @@
 // ToDoApp.java
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class ToDoApp {
     static ArrayList tasks = new ArrayList();
@@ -52,3 +51,4 @@ public class ToDoApp {
         }
     }
 }
+
