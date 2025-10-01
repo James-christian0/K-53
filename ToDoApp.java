@@ -1,12 +1,15 @@
 // ToDoApp.java
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ToDoApp {
-    static ArrayList tasks = new ArrayList();
+    // Stores tasks in a list
+    static ArrayList<String> tasks = new ArrayList<>(); 
 
-    public static void addtask(String t){
-        tasks.add(t);
-        System.out.println("Task Added!!"); 
+    // Add a task to the list
+    public static void addTask(String task) {
+        tasks.add(task);
+        System.out.println("Task added!");
     }
 
     public static void showTasks( ) {
@@ -53,3 +56,4 @@ public class ToDoApp {
 }
 
 //Octaviano was here
+
