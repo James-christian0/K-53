@@ -1,17 +1,15 @@
-// ToDoApp.java
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ToDoApp {
-    // Stores tasks in a list
-    static ArrayList<String> tasks = new ArrayList<>(); 
-
-    // Add a task to the list
+    // Store tasks in a list
+    static ArrayList<String> tasks = new ArrayList<>();
+    // Add task to the list
     public static void addTask(String task) {
         tasks.add(task);
         System.out.println("Task added!");
     }
-    //Display tasks
+    // Displays all tasks
     public static void showTasks() {
         if (tasks.isEmpty()) {
             System.out.println(" No tasks yet.");
@@ -22,22 +20,22 @@ public class ToDoApp {
             }
         }
     }
-    // Remove a task safely
+    // Removes a task
     public static void removeTask(int index) {
         if (index < 1 || index > tasks.size()) {
             System.out.println(" Invalid task number.");
         } else {
-            // Adjust for zero-based index
+            // Adjust to zero-based index
             String removed = tasks.remove(index - 1);
             System.out.println("Removed: " + removed);
         }
     }
-    // 
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            // Cleaner menu formatting
+            // Menu format
             System.out.println("\n To-Do List Menu:");
             System.out.println("1. Add Task");
             System.out.println("2. Show Tasks");
@@ -47,7 +45,6 @@ public class ToDoApp {
 
             int choice;
             try {
-                // Reads whole line, avoids Scanner skipping issues
                 choice = Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
                 System.out.println(" Invalid input. Please enter a number.");
@@ -74,7 +71,7 @@ public class ToDoApp {
                     break;
                 case 4:
                     System.out.println(" Exiting To-Do App. Goodbye!");
-                    return; // exit program
+                    return; // Exit Program
                 default:
                     System.out.println(" Invalid choice. Please try again.");
             }
